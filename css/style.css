@@ -1,0 +1,122 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+body {
+    background-color: #ced0ef;
+}
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+nav a {
+    text-decoration: none;
+    color: #000;
+}
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+footer {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding: 20px;
+    background-color: #a1c5f4
+
+}
+.article-header {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    gap: 10px;
+    padding: 20px;
+
+}
+
+.article-content {
+    display: grid;
+    grid-template-columns: 1fr; /*single column layout */
+    gap: 20px;
+    padding: 20px;
+}
+.sidebar {
+    display: flex;
+    flex-direction: columm;
+    gap: 10px;
+}
+.advertisement { 
+    padding: 10px;
+    border: 1px solid  #ccc;
+    text-align: center;
+}
+/* .photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* creates responsive grid*/ 
+    /* gap: 20px;
+    padding: 20px; */
+/* } */ 
+.photo-gallery{
+    max-width: 100vh;
+    position: relative;
+    margin: auto;
+}
+.photo img {
+    width: 100%; /* ensure images are fully responsive within their containers */
+    height: auto; /* maintain aspect ratio */
+}
+.gallery-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+}
+@media{
+    #pictureone{ 
+        display: block;
+    }
+    .picture {
+        display: none;
+    }
+}
+.buttons{
+    border-radius: 16px;
+    padding: 10px;
+}
+nav { 
+    display: flex; 
+    justify-content: center;
+    padding: 10px;
+
+}
+nav ul { 
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+/* hamburger menu style */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+/* hide reuglar nav items on smaller screens*/
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* show hamburger menu */
+    }
+    nav ul {
+        flex-direction: column;
+        display: none; /* initially hide nav items */
+    }
+    /* when clicking the hamburger menu, use javascript to toggle this class to display the items */
+    nav ul.active {
+        display: flex; /* display nav items in a column */
+    }
+}

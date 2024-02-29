@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newspaper landing page</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Dolby Designs and Engineering </h1>
+        <nav>
+            <div class="hamburger">☰</div>
+            <ul>
+                <li><a href="index.html" target="_blank">Home</a></li>
+                <li><a href="article.html" target="_self">Articles</a></li>
+                <li><a href="gallery.html" target="_blank">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="photo-gallery">
+        <div class="photo" id="pictureone"><img src="https://www.franklowe.com/wp-content/uploads/2021/07/Fenestration.jpg" alt="photo description"></div> 
+        <div class="photo"><img src="https://cypressdoorglass.com/wp-content/uploads/2022/04/curtainwall-scaled.jpeg" alt="photo description"></div>
+        <div class="photo"><img src="https://images.contentstack.io/v3/assets/bltf589e66bcaecd79c/blta8b8dceca51d0838/611a9db31da1da13cddbf677/Impact-Resistant-Glass-Demonstration.jpg?width=900&height=450&format=jpg&quality=90" alt="photo description"></div>
+        <div class="photo"><img src="https://www.seniorarchitectural.co.uk/wp-content/uploads/2022/07/berwick-leisure-centre-project-gallery1.jpg" alt="photo description"></div> 
+        <div class="gallery-controls">
+            <button class="buttons" id="prev" onclick="plusSlides(-1)">Previous</button>
+            <button class="buttons" id="next" onclick="plusSlides(1)">Next</button>
+        </div>
+    </div>
+    
+    <!-- JavaScript for slideshow controls -->
+    <script>
+        var slideIndex = 1;
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("photo");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slides[slideIndex-1].style.display = "block";  
+        }
+
+        showSlides(slideIndex);
+    </script>
+
+    <!-- Navigation controls -->
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', function(){
+            document.querySelector('nav ul').classList.toggle('active')
+        });
+    </script>
+</body>
+</html>

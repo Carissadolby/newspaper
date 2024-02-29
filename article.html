@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newspaper landing page</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<body>
+    <header>
+        <h1>Dolby Designs and Engineering</h1>
+        <nav>
+            <div class="hamburger">☰</div>
+            <ul>
+                <li><a href="index.html" target="_blank">Home</a></li>
+                <li><a href="article.html" target="_self">Articles</a></li>
+                <li><a href="gallery.html" target="_blank">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+    <header class="article-header">
+        <h1>About Us</h1>
+        <p>by Carissa Dolby | Est. 2024 </p>
+    </header>
+    <!-- content section and sidebar will go here -->
+<main class="article-content">
+    <section>
+        <h2>Dolby Designs LLC (Dolby Designs LLC Engineering) will provide design
+            and engineering services to the fenestration industry, utilizing knowledge and expertise
+            gained by over 70 compiled years of experience in the market.</h2>
+        <p> Some key compontents include:
+            
+            Product and component design, developing test plans, performing engineering analysis, providing validation services for FLorida Product Aprrovals, Professional Engineer (PE) review,
+            PE seal of 3rd party engineering packages and shop drawings, and providing independent 3rd party witness services for test labs. 
+            </p>
+        <!-- add images or other media here-->
+    </section>
+    <!-- additional sections as needed-->
+    <aside class="sidebar"></aside>
+        <section class="advertisement">
+            <h3>Click here!</h3>
+            <p>Get a consultation for your product today</p>   
+        </section>
+    </aside>
+</main>
+<script>
+    document.querySelector('.hamburger').addEventListener('click', function(){
+        document.querySelector('nav ul').classList.toggle('active');
+
+    });
+</script>
+</body>
+</html>
